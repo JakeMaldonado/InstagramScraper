@@ -38,6 +38,8 @@ async function scrapeFollowers() {
     console.log("An error occured:", err);
   }
   nick.exit();
+
+  return this;
 }
 
 // set up a new session on and navigate to the page
@@ -68,4 +70,3 @@ async function clickButton(selector) {
 }
 
 module.exports = scrapeFollowers;
-

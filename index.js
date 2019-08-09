@@ -1,4 +1,4 @@
-const scrapeFollowers = require('./app/scrape.js');
+const scrapeFollowers = require('./scrape.js');
 const selectors = require('./selectors');
 
 const IgScrape = (url, cookie) => {
@@ -10,6 +10,7 @@ IgScrape.prototype = {
 };
 
 IgScrape.init = (url, cookie) => {
+  // validate params
   if(!url) throw 'Error: a URL must be provided';
   if(!cookie || !(cookie instanceof Object)) throw 'Error: a cookie object must be provided';
 
