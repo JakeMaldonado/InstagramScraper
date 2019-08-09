@@ -23,14 +23,14 @@ async function scrapeFollowers() {
     await this.tab.waitUntilVisible(this.selectors.followerModalHeader);
     await this.tab.waitUntilVisible(this.selectors.followerModalFollowerButton);
 
-    while {
-      try {
-        await tab.wait(3000)
-        await tab.scrollToBottom();
-      } catch (err) {
-        console.log("reached bottom of followers modal");
-      }
-    }
+    // while {
+    //   try {
+    //     await tab.wait(3000)
+    //     await tab.scrollToBottom();
+    //   } catch (err) {
+    //    console.log("reached bottom of followers modal");
+    //   }
+    //  }
 
     const path = await this.tab.screenshot('screencap.jpg');
     console.log("Screenshot saved at", path)
